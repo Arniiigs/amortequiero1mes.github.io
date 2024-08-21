@@ -19,7 +19,7 @@
             display: none;
             text-align: center;
             border: 2px solid #ff6f91;
-            padding: 80px 30px; /* Aumentado el padding superior */
+            padding: 80px 30px; /* Padding ajustado */
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 20px;
@@ -66,11 +66,12 @@
 
         #content-container {
             text-align: center;
+            margin-top: 500px; /* Aumentado el margen superior para mover el contenido aún más hacia abajo */
         }
 
         .media-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             gap: 20px; /* Espacio entre los elementos */
             margin-top: 20px;
@@ -89,7 +90,7 @@
 
         #content-container h1 {
             color: #ff6f91;
-            margin: 80px 0 40px 0; /* Incrementado el margen superior */
+            margin: 40px 0 20px 0; /* Ajustado el margen superior */
         }
 
         #content-container p {
@@ -122,8 +123,8 @@
         
         Amor, cada día que paso contigo es un día en el que me siento completo y seguro de mí mismo, una sensación que jamás había experimentado, pero que gracias a ti se ha convertido en mi realidad cotidiana. 
         
-        Al igual para muchos hacer estas cosas en el primer mes de una relación puede parecer apresurado o como si estuviéramos yendo demasiado rápido. Pero para mí, este no ha sido solo un mes cualquiera, ha sido el mejor mes de mi vida. Sé que hemos pasado por altibajos, pero incluso esos momentos han sido parte de un viaje de descubrimiento y emociones que me han revelado partes de mí que no conocía. Gracias a ti, me siento mejor cada día, y en este mes a tu lado he aprendido lo que realmente significa el amor. He experimentado la desesperación de perder algo que quieres con todo tu ser, la nostalgia de extrañar a alguien tanto que estarías dispuesto a coger un avión solo para verla, y también el amor más puro y auténtico que jamás haya sentido. En este corto tiempo, he vivido tantas etapas del amor que me siento afortunado de haberlas experimentado contigo. Así que para toda esa gente se pude ir a tomar por culo, porque para mí este mes ha sido un antes y un después de mi vida.
-        
+        Al igual para muchos hacer estas cosas en el primer mes de una relación puede parecer apresurado o como si estuviéramos yendo demasiado rápido. Pero para mí, este no ha sido solo un mes cualquiera, ha sido el mejor mes de mi vida. Sé que hemos pasado por altibajos, pero incluso esos momentos han sido parte de un viaje de descubrimiento y emociones que me han revelado partes de mí que no conocía. Gracias a ti, me siento mejor cada día, y en este mes a tu lado he aprendido lo que realmente significa el amor. He experimentado la desesperación de perder algo que quieres con todo tu ser, la nostalgia de extrañar a alguien tanto que estarías dispuesto a coger un avión solo para verla, y también el amor más puro y auténtico que jamás haya sentido. En este corto tiempo, he vivido tantas etapas del amor que me siento afortunado de haberlas experimentado contigo. Así que para toda esa gente se pude ir a tomar por culo, porque para mí este mes ha sido un antes y un después de mi vida
+    
         TE QUIERO ♡♡♡
     </p>
     <div class="media-container">
@@ -135,7 +136,7 @@
     </div>
 </div>
 
-<audio id="music" src="c:\Users\Usuario\Downloads\ytmp3free.cc_cosas-que-no-te-dije-saiko-letra-saiko-youtubemp3free.org.mp3" preload="auto"></audio>
+<audio id="music" src="ytmp3free.cc_cosas-que-no-te-dije-saiko-letra-saiko-youtubemp3free.org.mp3" preload="auto" autoplay></audio>
 
 <script>
     function checkPassword() {
@@ -151,6 +152,13 @@
             alert('Contraseña incorrecta, pista es tu verdadero nombre jejjeje :)');
         }
     }
+
+    // Asegúrate de que el audio se reproduzca si está listo
+    document.getElementById('music').addEventListener('canplaythrough', function() {
+        if (document.getElementById('content-container').classList.contains('active')) {
+            this.play();
+        }
+    });
 </script>
 
 </body>
